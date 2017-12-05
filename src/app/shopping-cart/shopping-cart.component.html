@@ -1,3 +1,29 @@
-<p>
-  shopping-cart works!
-</p>
+<div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of shoppingCart.products">
+      <div class="row">
+        <div class="col-sm-2 hidden-xs">
+          <img src="http://placehold.it/100x100" alt="..." class="img-responsive" />
+        </div>
+        <div class="col-sm-6">
+          <h4 class="nomargin">
+            <a routerLink="../product/{{item.product.id}}">{{item.product.name}}</a>
+          </h4>
+          <p>描述：test</p>
+        </div>
+        <div class="col-sm-4">
+          <p>單價 ：$ {{item.product.price}}</p>
+          <p>數量 ：{{item.amount}}</p>
+          <p>總價 ：$ {{item.product.price * item.amount}}</p>
+          <button (click)="removeItem(item)">remove</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <footer>
+    <span class="pull-right"> Total Price : ${{totalPrice}}
+      <a href="#">結帳 (還沒做)</a>
+    </span>
+
+  </footer>
+</div>

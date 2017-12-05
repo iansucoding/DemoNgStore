@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'app';
-}
+  constructor(private shoppingCartService: ShoppingCartService) {}
+
+  get shoppingCartItemAmount(): number {
+    return this.shoppingCartService.totalAmount;
+  }
+ }

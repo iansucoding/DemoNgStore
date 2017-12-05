@@ -3,10 +3,7 @@ import { Injectable , OnDestroy} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { delay } from 'rxjs/operators';
-
-export class Product {
-  constructor(public id: number, public name: string, public price: number) { }
-}
+import { Product } from './product';
 
 const PRODUCTS: Product[]  = [
   new Product(1, '白鞋', 100),

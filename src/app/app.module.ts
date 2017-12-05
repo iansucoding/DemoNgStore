@@ -7,6 +7,7 @@ import { HomeModule } from './home/home.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CoreModule } from './core/core.module';
     CoreModule.forRoot({userName: 'Guest'}),
     AppRoutingModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [ShoppingCartService]
 })
 export class AppModule { }
