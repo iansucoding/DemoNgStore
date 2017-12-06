@@ -8,6 +8,7 @@ import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
+import { AccountService } from './account/account.service';
 
 
 @NgModule({
@@ -20,6 +21,6 @@ import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
     AppRoutingModule
   ],
   bootstrap: [AppComponent],
-  providers: [ShoppingCartService]
+  providers: [ShoppingCartService, AccountService]
 })
 export class AppModule { }

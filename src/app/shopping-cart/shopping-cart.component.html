@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="shoppingCart.products && shoppingCart.products.length > 0">
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let item of shoppingCart.products">
       <div class="row">
@@ -15,15 +15,18 @@
           <p>單價 ：$ {{item.product.price}}</p>
           <p>數量 ：{{item.amount}}</p>
           <p>總價 ：$ {{item.product.price * item.amount}}</p>
-          <button (click)="removeItem(item)">remove</button>
+          <button (click)="removeItem(item)" class="btn btn-danger">remove</button>
         </div>
       </div>
     </li>
+    <li class="list-group-item">
+      <span class="pull-right"> Total Price : ${{totalPrice}}
+        <a routerLink="../checkout" class="btn btn-primary">結帳</a>
+      </span>
+    </li>
   </ul>
-  <footer>
-    <span class="pull-right"> Total Price : ${{totalPrice}}
-      <a href="#">結帳 (還沒做)</a>
-    </span>
 
-  </footer>
+</div>
+<div class="alert alert-primary" role="alert" *ngIf="shoppingCart.products.length === 0">
+  It is Empty
 </div>
