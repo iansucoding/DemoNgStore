@@ -23,6 +23,7 @@ export class AccountLoginComponent implements OnInit {
     if (!this.returnUrl) {
       this.returnUrl = 'home';
     }
+    // console.log('this.returnUrl = ', this.returnUrl);
   }
 
   onSubmit() {
