@@ -1,17 +1,24 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { ProductService} from './product.service';
+import { ProductService } from './product.service';
 import { Product } from './product';
 import { ShoppingCartService } from '../shopping-cart/shopping-cart.service';
 
 @Component({
-  templateUrl: './product-list.component.html'
+  templateUrl: './product-list.component.html',
+  styles: [`
+  .brick {
+    width: 200px;
+    margin:10px;
+  }
+  `]
 })
 export class ProductListComponent {
   products: Observable<Product[]>;
   constructor(
     private productService: ProductService,
-    private shoppingCartService: ShoppingCartService) {
+    private shoppingCartService: ShoppingCartService
+  ) {
     this.products = this.productService.getProducts();
   }
   addToShoppingCart(product: Product): void {

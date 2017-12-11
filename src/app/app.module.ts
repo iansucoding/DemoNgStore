@@ -11,11 +11,10 @@ import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 import { AccountService } from './account/account.service';
 import { PageNotFoundComponent } from './page-not-found.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

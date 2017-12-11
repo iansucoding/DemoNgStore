@@ -1,4 +1,4 @@
-<div *ngIf="shoppingCart.products && shoppingCart.products.length > 0">
+<!-- <div *ngIf="shoppingCart.products && shoppingCart.products.length > 0">
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let item of shoppingCart.products">
       <div class="row">
@@ -7,15 +7,15 @@
         </div>
         <div class="col-sm-6">
           <h4 class="nomargin">
-            <a routerLink="../product/{{item.product.id}}">{{item.product.name}}</a>
+            <a routerLink="../../product/{{item.product.id}}">{{item.product.name}}</a>
           </h4>
-          <p>描述：test</p>
+          <p>{{item.product.desc}}</p>
         </div>
         <div class="col-sm-4">
           <p>單價 ：$ {{item.product.price}}</p>
           <p>數量 ：{{item.amount}}</p>
           <p>總價 ：$ {{item.product.price * item.amount}}</p>
-          <button (click)="removeItem(item)" class="btn btn-danger">remove</button>
+          <button (click)="removeItem(item)" class="btn btn-danger" role="link">remove</button>
         </div>
       </div>
     </li>
@@ -26,7 +26,80 @@
     </li>
   </ul>
 
-</div>
-<div class="alert alert-primary" role="alert" *ngIf="shoppingCart.products.length === 0">
-  It is Empty
+</div> -->
+
+<div class="row">
+  <div class="col-sm-12 col-md-12">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th class="text-center">Price</th>
+          <th>Quantity</th>
+          <th class="text-center">Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of shoppingCart.products">
+          <td class="col-sm-8 col-md-6">
+            <div class="media">
+              <img class="media-object thumbnail pull-left" src="../../assets/{{ item.product.img }}" style="width: 72px; height: 72px;">
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a routerLink="../../product/{{item.product.id}}">{{item.product.name}}</a>
+                </h4>
+                <span>
+                  {{ item.product.desc }}
+                </span>
+              </div>
+            </div>
+          </td>
+          <td class="col-sm-1 col-md-1 text-nowrap text-center">
+              <strong>$ {{ item.product.price}}</strong>
+            </td>
+          <td class="col-sm-1 col-md-1 text-nowrap" style="text-align: center">
+            {{ item.amount }}
+          </td>
+          <td class="col-sm-1 col-md-1 text-nowrap text-center">
+            <strong>$ {{ item.product.price * item.amount}}</strong>
+          </td>
+          <td class="col-sm-1 col-md-1">
+            <button type="button" class="btn btn-danger" (click)="removeItem(item)" role="link">
+              <span class="fa fa-remove"></span> Remove
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>   </td>
+          <td>   </td>
+          <td>   </td>
+          <td>
+            <h3>Total</h3>
+          </td>
+          <td class="text-right">
+            <h3>
+              <strong>$ {{totalPrice}}</strong>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td>   </td>
+          <td>   </td>
+          <td>   </td>
+          <td>
+            <button type="button" class="btn btn-default" role="link" routerLink="../../product">
+              <span class="fa fa-shopping-cart"></span> Continue Shopping
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-success" role="link" routerLink="../checkout" *ngIf="shoppingCart.products.length !== 0">
+              Checkout
+              <span class="fa fa-play"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
