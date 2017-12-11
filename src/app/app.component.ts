@@ -20,6 +20,7 @@ import { getTestBed } from '@angular/core/testing';
 })
 export class AppComponent implements OnInit {
   currentLink = '';
+  isCollapsed = true;
   constructor(
     private shoppingCartService: ShoppingCartService,
     private accountService: AccountService,
@@ -53,5 +54,10 @@ export class AppComponent implements OnInit {
 
   logout() {
     this.accountService.logout();
+  }
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
+    console.log(this.isCollapsed);
   }
 }
