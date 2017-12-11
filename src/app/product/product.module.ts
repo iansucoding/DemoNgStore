@@ -7,7 +7,7 @@ import { ProductService } from './product.service';
 import { MasonryModule } from 'angular2-masonry';
 
 @NgModule({
-  imports: [CommonModule, ProductRoutingModule, MasonryModule],
+  imports: [CommonModule, MasonryModule, ProductRoutingModule],
   declarations: [ProductDetailComponent, ProductListComponent],
   providers: [ProductService]
 })

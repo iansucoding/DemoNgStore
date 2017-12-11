@@ -1,4 +1,4 @@
-<masonry class="row">
+<masonry [useImagesLoaded]="true">
   <masonry-brick class="brick" *ngFor="let product of products | async">
     <div class="card h-100">
       <img class="card-img-top img-fluid" src="{{product.img}}" alt="">
