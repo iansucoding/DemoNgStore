@@ -8,7 +8,6 @@ import { MasonryModule } from 'angular2-masonry';
 
 @NgModule({
   imports: [CommonModule, MasonryModule, ProductRoutingModule],
-  declarations: [ProductDetailComponent, ProductListComponent],
-  providers: [ProductService]
+  declarations: [ProductDetailComponent, ProductListComponent]
 })
 export class ProductModule {}

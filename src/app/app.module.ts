@@ -10,6 +10,7 @@ import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 import { AccountService } from './account/account.service';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { AuthGuard } from './auth-guard.service';
+import { ProductService } from './product/product.service';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
@@ -19,6 +20,6 @@ import { AuthGuard } from './auth-guard.service';
     AppRoutingModule
   ],
   bootstrap: [AppComponent],
-  providers: [ShoppingCartService, AccountService, AuthGuard]
+  providers: [ShoppingCartService, AccountService, AuthGuard, ProductService]
 })
 export class AppModule {}
