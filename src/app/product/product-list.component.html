@@ -1,7 +1,7 @@
 <masonry [useImagesLoaded]="true">
   <masonry-brick class="brick" *ngFor="let product of products | async">
     <div class="card h-100">
-      <img class="card-img-top img-fluid" src="assets/{{ product.img }}" alt="">
+      <img class="card-img-top img-fluid" src="{{ product.img }}" alt="">
       <div class="card-body">
         <h4 class="card-title">
           <a routerLink="{{'../' + product.id}}">{{product.name}}</a>

@@ -10,7 +10,7 @@ const PRODUCTS: Product[] = [
     10,
     '白布鞋',
     'Canvas shoes for Men Slip on Sneakers',
-    '../../assets/51zvKe7HwOL._UY535_.jpg',
+    './assets/51zvKe7HwOL._UY535_.jpg',
     'shoes',
     100
   ),
@@ -18,7 +18,7 @@ const PRODUCTS: Product[] = [
     11,
     '黑皮鞋',
     'Premium Leather Lining, Latex Cushioned Footbed',
-    '../../assets/61AnpdHT2qL._UX535_.jpg',
+    './assets/61AnpdHT2qL._UX535_.jpg',
     'shoes',
     120
   ),
@@ -26,7 +26,7 @@ const PRODUCTS: Product[] = [
     20,
     '運動褲',
     '65% Polyester, 35% Cotton',
-    '../../assets/61Cdw9ZeexL._UY575_.jpg',
+    './assets/61Cdw9ZeexL._UY575_.jpg',
     'pant',
     50
   ),
@@ -34,7 +34,7 @@ const PRODUCTS: Product[] = [
     21,
     '休閒褲',
     'Flat Front Stretch Woven Pants',
-    '../../assets/510gX4PAotL._SY450_.jpg',
+    './assets/510gX4PAotL._SY450_.jpg',
     'pant',
     40
   ),
@@ -42,7 +42,7 @@ const PRODUCTS: Product[] = [
     40,
     '裁判衣服',
     'V-Neck Striped Referee Shirt Jersey',
-    '../../assets/61buWHOl-oL._SL1000_.jpg',
+    './assets/61buWHOl-oL._SL1000_.jpg',
     'clothing',
     20
   ),
@@ -50,7 +50,7 @@ const PRODUCTS: Product[] = [
     41,
     '運動便衣',
     'Casual 3/4 Sleeve Baseball Tshirt Raglan Jersey Shirt',
-    '../../assets/71P3TbAp8kL._UX466_.jpg',
+    './assets/71P3TbAp8kL._UX466_.jpg',
     'clothing',
     20
   )
