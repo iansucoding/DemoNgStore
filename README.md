@@ -1,3 +1,8 @@
 # DemoNgStore
 
-用 Angular 5 建立的購物網站
+created by Angular 5 
+
+# build
+
+ng build --prod --base-href "http://iansucoding.github.io/resume/works/DemoNgStore/"
+
