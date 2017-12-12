@@ -10,7 +10,7 @@ import { ShoppingCartService } from '../shopping-cart/shopping-cart.service';
     <div class="col-md-4">
     <div class="card h-100">
       <a href="#">
-        <img class="card-img-top" src="{{ product.img }}" alt="">
+        <img class="card-img-top" src="./assets/{{ product.img }}" alt="">
       </a>
       <div class="card-body">
         <h4 class="card-title">{{ product.name }}</h4>
