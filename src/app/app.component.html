@@ -4,8 +4,8 @@
     <a class="navbar-brand" href="#">DemoNgStore</a>
     <span class="text-info">{{greet}}</span>
 
-    <button (click)="toggleCollapse()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button (click)="toggleCollapse()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive" [style.display]="!isCollapsed ? 'block' : 'none'">
@@ -22,9 +22,6 @@
           </a>
         </li>
         <li class="nav-item" *ngIf="!isLogin">
-          <!-- <a class="nav-link" routerLink="account/login" routerLinkActive="active">
-              <i class="fa fa-sign-in" aria-hidden="true"></i> Login
-          </a> -->
           <a class="nav-link" [routerLink]="['account/login', { returnUrl: currentLink }]" routerLinkActive="active">
             <i class="fa fa-sign-in" aria-hidden="true"></i> Login
           </a>
@@ -39,7 +36,7 @@
   </div>
 </nav>
 <!-- Page Content -->
-<div class="container" style="margin-bottom:30px;">
+<div class="container" style="margin-bottom:32px;">
   <router-outlet></router-outlet>
 </div>
 
@@ -48,5 +45,4 @@
   <div class="container">
     <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
   </div>
-  <!-- /.container -->
 </footer>

@@ -4,7 +4,13 @@ import { ProductService } from '../product/product.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html'
+  templateUrl: './home.component.html',
+  styles: [`
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  `]
 })
 export class HomeComponent implements OnInit {
   product: Product;
@@ -12,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.productService.getProducts().subscribe(p => {
-      this.product = p.find(x => x.id === 10);
+      this.product = p[0];
     });
   }
 }

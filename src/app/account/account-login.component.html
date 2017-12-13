@@ -8,12 +8,6 @@
       <div class="panel-body">
         <div class="alert alert-danger" role="alert" *ngIf="isLoginFail">
           登入失敗, 可用的帳號有 :
-          <br>
-          bob@mail.com.com (user)
-          <br>
-          peter@mail.com (admin)
-          <br>
-          密碼都為 : 0000
         </div>
         <form accept-charset="UTF-8" role="form" #loginForm="ngForm" (ngSubmit)="onSubmit()">
           <fieldset>
@@ -34,4 +28,15 @@
       </div>
     </div>
   </div>
+  <div class="col-md-4">
+    <div class="alert alert-info" role="alert">
+      可用的帳號有 :
+      <ul>
+        <li>bob@mail.com.com (user)</li>
+        <li>peter@mail.com (admin)</li>
+      </ul>
+      密碼都為 : 0000
+    </div>
+  </div>
+
 </div>
